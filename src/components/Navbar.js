@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <StyledNav>
       <NavContainer>
-        <Header1>MurrBlog</Header1>
+        <Header1 to="/">MurrBlog</Header1>
         <AuthPanel>
           <SignupButton>Sign up</SignupButton>
           <LoginButton>Log in</LoginButton>

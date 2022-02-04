@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import he from "he";
 import {
@@ -9,14 +10,12 @@ import {
   ArticleInfo,
 } from "../styled-components/StyledArticles";
 
-// TODO: Add navigation to articles i.e. click on title - go to detail
-
 function articleList(articles) {
   return (
     <ArticleList className="ArticleList">
       {articles.map((article) => (
         <Article key={article._id} className="Article">
-          <ArticleTitle>{he.decode(article.title)}</ArticleTitle>
+          <Link to={`articles/${article._id}`}>{he.decode(article.title)}</Link>
           <p>{he.decode(article.body)}</p>
           <ArticleInfo>
             <p>
@@ -47,7 +46,7 @@ export default function Articles() {
 
   return (
     <ArticleWall className="ArticleWall">
-      {articles.length === 0 ? <p>No articles yet!</p> : articleList(articles)}
+      {articles.length > 0 && articleList(articles)}
     </ArticleWall>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const StyledNav = styled.nav`
   background: black;
@@ -16,10 +17,12 @@ export const NavContainer = styled.div`
   grid-template-columns: repeat(3, minmax(20px, 1fr));
 `;
 
-export const Header1 = styled.h1`
-  color: white;
+export const Header1 = styled(Link)`
   grid-column: 2 / 3;
   place-self: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
 `;
 
 export const AuthPanel = styled.div`
