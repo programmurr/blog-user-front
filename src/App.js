@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Articles from "./components/Articles";
 import ArticleDetail from "./components/ArticleDetail";
 
+// TODO: Auth!
+
 function App() {
   return (
     <BrowserRouter>

@@ -6,7 +6,6 @@ import {
   ArticleWall,
   ArticleList,
   Article,
-  ArticleTitle,
   ArticleInfo,
 } from "../styled-components/StyledArticles";
 
@@ -16,7 +15,6 @@ function articleList(articles) {
       {articles.map((article) => (
         <Article key={article._id} className="Article">
           <Link to={`articles/${article._id}`}>{he.decode(article.title)}</Link>
-          <p>{he.decode(article.body)}</p>
           <ArticleInfo>
             <p>
               By {article.author.username}
